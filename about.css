@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+} 
+
+body{
+  background-color: var(--primary-color);
+}
+:root{
+  --primary-color: #edf2fc;
+  --secondary-color: #0e0e0e;
+}
+.dark-theme{
+  --primary-color:#0e0c36;
+  --secondary-color:#ffffff;
+}
+.Profile {
+  text-align: center;
+  border-radius: 100%;
+  width: 100%;
+  margin: 10px auto;
+}
+.Profile img{
+  height: 20rem;
+}
+#Profile_pic{
+  border-radius: 150px;
+  width: auto;
+
+}
+.logo{
+  width: 100px;
+  font-size: medium;
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-family: 'Dancing Script', cursive;
+}
+
+nav{
+  display: flex;
+  width: 84%;
+  color: var(--secondary-color);
+  margin: auto;
+  font-size: larger;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul{
+  flex: 1;
+  text-align: right;
+  color: var(--secondary-color);
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover{
+  color: red;
+}
+/* hamburger */
+.hamburger {
+display: none;
+}
+
+.bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+background-color: var(--secondary-color);
+}
+/* modes */
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+.text {
+
+  margin-top: 30px;
+  font-size: large;
+  color: var(--secondary-color);
+  margin-left: 10rem;
+}
+.accordion {
+    display: flex;
+    width: 50%;
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-left: 30rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .accordion-item {
+    border: 1px solid #dc1313;
+  }
+  
+  .accordion-header {
+    background-color: #478eb8;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-header:hover {
+    background-color: #eee;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+
+
+/* footer */
+.footer{
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  bottom: 0;
+}
+.footer p{
+  background-color: #333;
+  color: #ffffff;
+  width: 100%;
+  font-size: medium;
+  z-index: 1;
+ 
+}
+.footer a{
+  color: var(--secondary-color);
+ }
+ .footer a:hover{
+  color: blue;
+ }
+ .footer a:active{
+  color: red;
+ }
+
+ .social{
+  margin-left: 6%;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.social a{
+  font-size: 30px;
+  color:  var(--secondary-color);
+  margin-right: 20px;
+}
+
+.social a:hover{
+  color: orange;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      z-index: 99;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-left: 220px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+      .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    }

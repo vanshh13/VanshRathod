@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vansh Rathod</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <nav class="navbar">
+    <h5 class="logo">Vansh Rathod</h5>
+        <ul class="menu">
+        <li class="nav-item"><a href="index.html">Home</a> &nbsp; </li>
+        <li class="nav-item"> <a href="education.html">Resume</a> &nbsp; </li>
+        <li class="nav-item"> <a href="hobbies.html">Hobbies</a> &nbsp;</li>
+        <li class="nav-item"> <a href="about.html">About</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </div>
+    <img src="images/theme/moon.png" alt="moon" id="icon">
+</nav> 
+<br>
+  <div class="body">
+  <div class="Profile">
+      <img id="Profile_pic" src="logo.jpg" width="128" 
+  height="128">
+  </div>
+  <br>
+<div class="text"><h2>Idea:</h2>
+</div>
+    <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Problem</h3>
+          </div>
+          <div class="accordion-content">
+                <p>Our environment is currently facing a significant waste management issue.</p>
+              </div>
+          </div>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Solution</h3>
+          </div>
+          <div class="accordion-content">
+            <p>Our goal is to provide people with the information and resources they need to reduce waste and make the most of the materials they have. By promoting sustainable practices and sharing tips and tricks for repurposing and reusing items, we aim to help individuals and communities become more mindful of their waste and its impact on the environment. Through our platform, we offer guides, tutorials, and other helpful resources that cover everything from composting and recycling to upcycling and DIY projects. We believe that by empowering people with the knowledge and tools they need to reduce waste and make sustainable choices, we can create a more environmentally conscious and responsible society.</p>
+        </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Prototype</h3>
+          </div>
+          <div class="accordion-content">
+            <p>A social media campaign that promotes waste management practices and encourages people to reduce, reuse, and recycle can make a significant impact on the environment. By using a catchy hashtag, you can easily invite people to join the conversation and share their own ideas and experiences. We aim to create a positive and engaging social media campaign that inspires people to make small but impactful changes in their daily lives.
+
+              To effectively spread the message, we plan to partner with social media influencers who are passionate about sustainability and have a large following. Through their content and posts, we can reach new audiences and spread awareness about the importance of waste reduction and management.
+              
+              Our campaign will feature a range of tips and advice on waste management, including information on how to properly sort and recycle different types of materials, and practical advice on how to reduce food waste. We will also share inspiring stories of individuals and organizations that have made a significant impact in waste reduction and management, and showcase innovative products and ideas that can help people make sustainable choices.
+              
+              Through our social media campaign, we hope to create a community of like-minded individuals who are passionate about reducing waste and creating a more sustainable future. We believe that by working together and sharing ideas and experiences, we can make a significant positive impact on the environment.</p>
+          </div>
+        </div>
+       </div>
+    <br>
+    <br><br>
+  <!--footer  -->
+<div class="footer">
+  <h3>
+  <a href="contactme.html" target="_self">Contact me</a>&nbsp;
+  <a href="feedback.html">Feedback</a>
+  </h3>
+  <div class="social">
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+   </div>
+  <p>Copyright © 2023 My Website. All rights reserved.</p>
+  
+  </div>
+        <script src='js/main_about.js'></script>
+        <script>
+          /*dark mode*/
+          var icon= document.getElementById("icon");
+          icon.onclick =function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+              icon.src = "images/theme/sun.png";
+          }
+          else{
+          icon.src ="images/theme/moon.png";
+           }
+          }
+      </script>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".menu");
+      
+      hamburger.addEventListener("click", mobileMenu);
+      
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      }
+      
+      </script>
+</body>
+</html>

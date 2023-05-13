@@ -1,0 +1,111 @@
+<html>
+<head>
+<title> Feedback Page</title>
+<style>
+body{
+	background-color: rgb(113, 113, 198);
+}
+r{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.container{
+margin: 20px auto;
+width: 226px;
+height:300px;
+background-color:#fff;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:1fr 1fr;
+float:right;
+margin-left: 130px;
+margin-top: 30px;
+}
+.box{
+background-color:#333;
+color:#fff;
+}
+.container img{
+width: 113px;
+height: 150px;
+}
+</style>
+<script>
+function allowDrop(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(showPosition);
+} else { 
+x.innerHTML = "Geolocation is not supported by this browser.";
+}
+}
+function showPosition(position) {
+x.innerHTML = "Latitude: " + position.coords.latitude + 
+"<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</head>
+<body bgcolor="Gainsboro">
+<form action="process.php" method="GET">
+	<label for="name">Name:</label>
+	<input type="text" id="name" name="name"><br><br>
+	<label for="email">Email:</label>
+	<input type="text" id="email" name="email"><br><br>
+	<label for="feedback-type">Feedback Type:</lable>
+	<select id="feedback-type" name="feedback-type">
+		<option value="bug-report">Bug Report</option>
+        	<option value="feature-request">Feature Request</option>
+        	<option value="general-feedback">General Feedback</option>
+      </select><br><br>
+ 	<label for="feedback">What should we improve?:</label><br>
+      <textarea id="feedback" name="feedback" rows="5" cols="40"required></textarea><br><br>
+      <button type="submit">Submit Feedback</button>
+    </form>
+	<section>
+	<fieldset>
+	<div class="container">
+	<div class="box"ondrop="drop(event)" ondragover="allowDrop(event)"
+	id="b1"></div>
+	<div class="box"ondrop="drop(event)" ondragover="allowDrop(event)"
+	id="b2"></div>
+	<div class="box"ondrop="drop(event)" ondragover="allowDrop(event)"
+	id="b3"></div>
+	<div class="box"ondrop="drop(event)" ondragover="allowDrop(event)"
+	id="b4"></div>
+	</div>
+	<div class="container">
+	<div class="box"><img src="images/game/4.jpg" draggable="true"
+	ondragstart="drag(event)" id="i1"></div>
+	<div class="box"><img src="images/game/3.jpg"draggable="true"
+	ondragstart="drag(event)" id="i2"></div>
+	<div class="box"><img src="images/game/1.jpg"draggable="true"
+	ondragstart="drag(event)" id="i3"></div>
+	<div class="box"><img src="images/game/2.jpg"draggable="true"
+	ondragstart="drag(event)" id="i4"></div>
+	</div>
+	<legend>Puzzle</legend>
+	<form action="" autocomplete="on" method="GET" name="myform"
+	onsubmit="return validateform()">
+	<h3>This is my location</h3>
+	<h3>latitude: 22.9914° <br> longitude: 71.4662° <br> </h3>
+	<h3>Click the button to get your coordinates.</h3>
+	<button onclick="getLocation()">Allow access to your location</button>
+	<p id="demo"></p>
+	</fieldset><br><br><br>
+	</section>
+</body>
+</html>

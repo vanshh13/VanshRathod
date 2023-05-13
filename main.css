@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+} 
+body{
+    background-color: var(--primary-color);
+}
+.body{
+    margin-bottom: 100px;
+}
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #478eb8;
+}
+.dark-theme{
+    --primary-color:#0e0c36;
+    --secondary-color:#ffffff;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 0;
+    background: var(--primary-color);
+} 
+.images{
+    width: 40vh;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    border-radius: 20px;
+    position: relative;
+    float: right;    
+}
+
+.Profile {
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    background-attachment: fixed;
+    border-radius: 30px;
+    padding: 0px 40px 50px 30px;
+    margin: 0px 40px 40px 40px;
+    width: 80vh;
+}
+
+.logo{
+    width: 100px;
+    font-size: large;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    color: var(--secondary-color);
+    margin: auto;
+    padding: 20px 0;
+    font-size: larger;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    color: var(--secondary-color);
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+.content{
+    padding-top: 80px;
+    text-align: left;
+    color: var(--primary-color);
+   }
+   .content h2{
+    text-align: left;
+    font-size: 170%;
+   }
+   .content h1{
+    font-size: 400%;
+   }
+
+/* hamburger */
+   .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--secondary-color);
+}
+
+/* modes */
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+/* footer */
+.footer{
+    width: 100%;
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+    bottom: 0;
+}
+.footer p{
+    
+    background-color: #333;
+    color: #ffffff;
+    z-index: 1;
+  }
+  .footer a{
+    color: var(--secondary-color);
+   }
+   .footer a:hover{
+    color: blue;
+   }
+   .footer a:active{
+    color: red;
+   }
+   .social{
+    margin-left: 6%;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.social a{
+    font-size: 30px;
+    color:  var(--secondary-color);
+    margin-right: 20px;
+}
+
+.social a:hover{
+    color: orange;
+}
+/* footer */
+   /*slider*/
+.slider{
+    position: relative;
+    width: 100%;
+    background: transparent;
+    opacity: 0.9;
+}
+.myslider{
+    height: 500px;
+    display: none;
+    overflow: hidden;
+}
+
+.prev, .next{
+    position: absolute;
+    top: 55%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: var(--primary-color);
+    transform: 0.1s;
+    user-select: none;
+}
+.prev:hover, .next:hover{
+    color: #3498db;
+}
+.prev{
+    left: 0;
+    margin-left: 52px;
+}
+.next{
+    right: 0;
+    margin-right: 870px;
+}
+/*end of silder*/
+/* for moblie screen navigation bar */
+  
+  @media screen and (max-width: 428px) {
+   
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: 0px;
+    }
+
+
+    .images{
+        width: 20vh;
+        height: 50%;
+        position: absolute;       
+    }
+    .images img{
+        border-radius: 20px;
+        position: absolute;   
+        margin-top: 800px; 
+    }
+    .myslider{
+        height: 480px;
+    }
+    .slider{
+        width: 90%;
+    }
+    .Profile{
+        width: 30vh;
+    }
+    .content{
+        padding-top: 80px;
+        text-align: left;
+       }
+       .content h2{
+        text-align: left;
+        font-size: 150%;
+       }
+       .content h1{
+        font-size: 300%;
+       }
+    .prev, .next{
+        position: absolute;
+        top: 55%;
+        font-size: 50px;
+        padding: 15px;
+    }
+    .prev{
+        left: 0;
+        margin-left: 30px;
+    }
+    .next{
+        right: 0;
+        margin-right: 30px;
+    }
+    /* footer */
+.footer{
+    width: 90%;
+    margin: 20px;
+    margin-top: 300px;
+    text-align: center;
+    bottom: 0;
+}
+    .social{
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.social a{
+    font-size: 30px;
+    margin-right: 20px;
+}
+/* footer */
+  }
+/* hamburger */
+  /* temp */
+
+  @media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        z-index: 99;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: 220px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+        .header li {
+          float: left;
+        }
+        .header li a {
+          padding: 20px 30px;
+        }
+        .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+        }
+        .header .menu-icon {
+          display: none;
+        }
+      
+      
+    .header{
+        padding: 0px 50px 30px 00px;
+
+    }
+    .images{
+        width: 20vh;
+        height: 50%;
+        position: absolute;       
+    }
+    .images img{
+        border-radius: 20px;
+        position: absolute;   
+        margin-top: 800px; 
+    }
+    .myslider{
+        padding: 0px 0px 20px 10px;
+        height: 500px;
+    }
+    .slider{
+        width: 100%;
+    }
+    .Profile{
+        padding: 0px 20px 0px 1px;
+        margin: 20px 0px 0px 20px;
+        width: 40vh;
+    }
+    .content{
+        padding-top: 80px;
+        text-align: left;
+       }
+       .content h2{
+        text-align: left;
+        font-size: 150%;
+       }
+       .content h1{
+        font-size: 300%;
+       }
+    /* footer */
+.footer{
+    width: 90%;
+    margin: 20px;
+    margin-top: 300px;
+    text-align: center;
+    bottom: 0;
+}
+    .social{
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.social a{
+    font-size: 30px;
+    margin-right: 20px;
+}
+/* footer */
+  }
+  
+
+
+  
+  @media screen and (max-width: 1314px) {
+    .images img{
+        margin-top: 458px;
+    }
+    .footer{
+        margin-top: 600px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer{
+        margin-top: 300px;
+    }
+  }
+
+  @media screen and (min-width: 775px) {
+    .prev, .next{
+        position: absolute;
+        top: 55%;
+    }
+    .next{
+        left: 0;
+        margin-left: 740px;
+    }
+  }
+  @media screen and (max-width: 785px) {
+    .prev, .next{
+        position: absolute;
+        top: 55%;
+    }
+    .next{
+        left: 0;
+        margin-left: 300px;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .prev, .next{
+        position: absolute;
+        top: 55%;
+    }
+    .next{
+        left: 0;
+        margin-left: 630px;
+    }
+  }
+  @media screen and (max-width: 377px) {
+    
+    .footer p{
+        font-size: small;
+        
+      }
+      .myslider{
+        padding: 0px 0px 20px 10px;
+        height: 400px;
+    }
+    .slider{
+        width: 100%;
+    }
+    .content{
+        padding-top: 80px;
+        text-align: left;
+       }
+       .content h2{
+        text-align: left;
+        font-size: 120%;
+       }
+       .content h1{
+        font-size: 200%;
+       }
+       .prev, .next{
+        position: absolute;
+        top: 65%;
+    }
+    .next{
+        left: 0;
+        margin-left: 230px;
+    }
+  } 
+  @media screen and (min-width: 760px) {
+    .prev, .next{
+        position: absolute;
+        top: 55%;
+    }
+  }

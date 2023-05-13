@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+} 
+body{
+    background-color: var(--primary-color);
+    background-attachment: fixed;
+    z-index: 1;
+}
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #0e0e0e;
+}
+.dark-theme{
+    --primary-color:#0e0c36;
+    --secondary-color:#ffffff;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+} 
+
+.Profile {
+    text-align: center;
+
+    border-radius: 30px;
+    opacity: 0.8;
+    width: 30%;
+    margin: 10px auto;
+ 
+
+}
+#Profile_pic{
+    border-radius: 90px;
+  
+}
+.logo{
+    width: 100px;
+    font-size: large;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Dancing Script', cursive;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    color: var(--secondary-color);
+    margin: auto;
+    font-size: larger;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    color: var(--secondary-color);
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+/* hamburger */
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary-color);
+}
+
+/* modes */
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+/* footer */
+.footer{
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    bottom: 0;
+  }
+  .footer p{
+    background-color: #333;
+    color: #ffffff;
+    width: 100%;
+    font-size: medium;
+    z-index: 1;
+   
+  }
+  .footer a{
+    color: var(--secondary-color);
+   }
+   .footer a:hover{
+    color: blue;
+   }
+   .footer a:active{
+    color: red;
+   }
+  
+   .social{
+    margin-left: 6%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .social a{
+    font-size: 30px;
+    color:  var(--secondary-color);
+    margin-right: 20px;
+  }
+  
+  .social a:hover{
+    color: orange;
+  }
+.Education table{
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    padding: 20px 20px 20px 20px;
+
+}
+.Achievement table{
+    width: 100%;
+    text-align: left;
+    border-radius: 20px;
+    color:  var(--secondary-color);
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    padding: 20px 20px 20px 20px;
+
+}
+.Experince table{
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    padding: 20px 20px 20px 20px;
+
+}
+.Experince table{
+    border: var(--secondary-color);
+}
+
+   /* Learning */
+   .Learning h2{
+        color: var(--primary-color);
+   }
+   /* badges */
+   .badge {
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    opacity: 0.7;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 3px 3px 3px 3px;
+    margin-right: 40px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .badge img {
+    max-width: 40%;
+    margin-bottom: 10px;
+  }
+  
+  .badge h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  .badge a{
+    color: var(--secondary-color);
+  }
+  .badge p {
+    font-size: 16px;
+    color: var(--secondary-color);
+    line-height: 1.5;
+  }
+  .goback{
+    float: right;
+    margin: 30px 30px 30px 30px;
+   }
+   .goback a{
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(0, 128, 255);
+   }
+   .goback a:hover{
+    padding: 10px 10px 10px 10px;
+
+   }
+
+
+   @media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        z-index: 99;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-left: 220px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+        .header li {
+          float: left;
+        }
+        .header li a {
+          padding: 20px 30px;
+        }
+        .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+        }
+        .header .menu-icon {
+          display: none;
+        }
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+  
+      .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+  
+      .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+      }
+      @media screen and(max-widht:379px) {
+        .badge {
+          display: inline-block;
+          width: 50px;
+          height: 20px;
+          border-radius: 5px;
+          margin: 0px 0px 0px 0px;
+          margin-right: 420px;
+          padding-top: 10px;
+          text-align: center;
+        }
+      }
